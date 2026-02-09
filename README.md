@@ -1,2 +1,11 @@
-# SEG3125-lab4-Group15
-SEG3125 Repository for lab 4 work. Group 15. 
+# SEG3125 Group 15 Lab 4
+
+Website using Bootstrap styling.
+
+Winona Chung (300298148)
+
+John Vitor Lopes (300319245)
+
+Rachel Olugbemiro (300302892)
+
+## Link:
