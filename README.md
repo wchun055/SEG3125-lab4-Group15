@@ -1,6 +1,6 @@
 # SEG3125 Group 15 Lab 4
 
-Website implementing CSS framework Bootstrap for styling.
+Website implementing CSS framework Bootstrap for styling. (Hair salon.)
 
 Winona Chung (300298148)
 
