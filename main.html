@@ -3,9 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iron Edge Barbers</title>
 </head>
 <body>
-    <h1>barber shop</h1>
+    <h1>Iron Edge Barbers</h1>
+    <p>Sharp cuts. Clean fades. Zero shortcuts.</p>
+    <p>123 Main Street, Brooklyn, NY 11201</p>
+    <p>(555) 123-4567</p>
+    <p>Mon–Sun 8–6</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openInfo(event, 'Barbers')">Barber Profiles</button>
+        <button class="tablinks" onclick="openInfo(event, 'Haircuts')">Haircuts</button>
+        <button class="tablinks" onclick="openInfo(event, 'Booking')">Book Your Cut</button>
+    </div>
+
+    <!-- Barber Profiles -->
+    <div id="Barbers" class="tabcontent">
+        <h3>Barbers</h3>
+        <div>
+            <h4 id="barber-name">Mike “The Blade” Rodriguez</h4>
+            <p id="barber-caption">If it’s not sharp, it’s not finished.</p>
+            <img id="barber-img" src="mike.jpg" alt="Mike “The Blade” Rodriguez">
+        </div>
+        <div>
+            <h4 id="barber-name">James Lee</h4>
+            <p id="barber-caption">Detail is everything. | Beard Specialist</p>
+            <img id="barber-img" src="james.jpg" alt="James Lee">
+        </div>
+        <div>
+            <h4 id="barber-name">Alex Carter</h4>
+            <p id="barber-caption">Subtle or bold—your move. | Colour Consultant </p>
+            <img id="barber-img" src="alex.jpg" alt="Alex Carter">
+        </div>
+    </div>
+
+    <!-- Haircut Types -->
+    <div id="Haircuts" class="tabcontent">
+        <h3>Haircuts</h3>
+        <div>
+            <h4 id="low-taper-fade">Low Taper Fade</h4>
+            <p id="haircut-caption">$15 | 30 minutes</p>
+            <img id="haircut-img" src="low-taper-fade.jpg" alt="Low Taper Fade">
+        </div>
+        <div>
+            <h4 id="beard-trim">Beard Trim</h4>
+            <p id="haircut-caption">$20 | 20 minutes</p>
+            <img id="haircut-img" src="beard-trim.jpg" alt="Beard Trim">
+        </div>
+        <div>
+            <h4 id="colour-services">Colour Services</h4>
+            <p id="haircut-caption">$40 | 60 minutes</p>
+            <img id="haircut-img" src="colour-services.jpg" alt="Colour Services">
+        </div>
+        <div>
+            <h4 id="wash-and-trim">Wash and Trim</h4>
+            <p id="haircut-caption">$30 | 45 minutes</p>
+            <img id="haircut-img" src="wash-and-trim.jpg" alt="Wash and Trim">
+        </div>
+    </div>
+
+    <!-- Booking Information -->
+    <div id="Booking" class="tabcontent">
+        <h2>Book Your Cut</h2>
+        <form id="booking-form">
+
+            <label for="barber">Choose your barber:</label><br>
+                <select id="barber" name="barber" required>
+                    <option value="select">--Select a barber--</option>
+                    <option value="mike">Mike “The Blade” Rodriguez</option>
+                    <option value="james">James Lee</option>
+                    <option value="alex">Alex Carter</option>
+                </select><br><br>
+
+            <label for="haircut">Choose your haircut:</label><br>
+                    <select id="haircut" name="haircut" required>
+                        <option value="select">--Select a haircut--</option>
+                        <option value="low-taper-fade">Low Taper Fade</option>
+                        <option value="beard-trim">Beard Trim</option>
+                        <option value="colour-services">Colour Services</option>
+                        <option value="wash-and-trim">Wash and Trim</option>
+                    </select><br><br>
+
+
+            <label for="date">Choose a date:</label><br>
+                    <input type="date" id="date" name="date" required><br><br>
+                    <script>
+                        const today = new Date().valueAsDateString();
+                        document.getElementById("date").setAttribute('min', today);
+                    </script>
+
+            <label for="time">Choose a time:</label><br>
+                    <input type="time" id="time" name="time" min="08:00" max="18:00" required><br><br>
+            
+            <h5>Contact Information</h5>
+            <label for="contact">Name:</label><br>
+                    <input type="text" id="name" name="contact" required><br><br>
+            <label for="contact">Phone Number:</label><br>
+                    <input type="text" id="phone-number" name="contact" required><br><br>    
+            <label for="contact">Optional Notes</label><br>
+                    <input type="text" id="notes" name="contact" placeholder="allergies, etc"><br><br>
+            <button type="submit">Book Now</button>
+
+        </form>
+
+        <div>
+            <h4>Your Booking Details</h4>
+            <h5 id="name"></h5>
+            <h6 id="phone-number"></h6>
+            <p id="barber"></p>
+            <p id="haircut"></p>
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+    </div>
 </body>
 </html>
