@@ -74,16 +74,16 @@
         <form id="booking-form">
 
             <label for="barber">Choose your barber:</label><br>
-                <select id="barber" name="barber" required>
-                    <option value="select">--Select a barber--</option>
+                <select id="barber-form" name="barber" required>
+                    <option value="" selected disabled hiddens>--Select a barber--</option>
                     <option value="mike">Mike “The Blade” Rodriguez</option>
                     <option value="james">James Lee</option>
                     <option value="alex">Alex Carter</option>
                 </select><br><br>
 
             <label for="haircut">Choose your haircut:</label><br>
-                    <select id="haircut" name="haircut" required>
-                        <option value="select">--Select a haircut--</option>
+                    <select id="haircut-form" name="haircut" required>
+                        <option value="" selected disabled hiddens>--Select a haircut--</option>
                         <option value="low-taper-fade">Low Taper Fade</option>
                         <option value="beard-trim">Beard Trim</option>
                         <option value="colour-services">Colour Services</option>
@@ -92,23 +92,23 @@
 
 
             <label for="date">Choose a date:</label><br>
-                    <input type="date" id="date" name="date" required><br><br>
+                    <input type="date" id="date-form" name="date" required><br><br>
                     <script>
                         const today = new Date().valueAsDateString();
                         document.getElementById("date").setAttribute('min', today);
                     </script>
 
             <label for="time">Choose a time:</label><br>
-                    <input type="time" id="time" name="time" min="08:00" max="18:00" required><br><br>
+                    <input type="time" id="time-form" name="time" min="08:00" max="18:00" required><br><br>
             
             <h5>Contact Information</h5>
             <label for="contact">Name:</label><br>
-                    <input type="text" id="name" name="contact" required><br><br>
+                    <input type="text" id="name-form" name="contact" required><br><br>
             <label for="contact">Phone Number:</label><br>
-                    <input type="tel" id="phone-number" name="contact" required><br><br>    
+                    <input type="tel" id="phone-number-form" name="contact" required><br><br>    
             <label for="contact">Optional Notes</label><br>
-                    <input type="text" id="notes" name="contact" placeholder="allergies, etc"><br><br>
-            <button type="submit">Book Now</button>
+                    <input type="text" id="notes-form" name="contact" placeholder="allergies, etc"><br><br>
+            <button type="submit" onsubmit="makeBooking()">Book Now</button>
 
         </form>
     </div>
@@ -121,6 +121,7 @@
         <p id="haircut"></p>
         <p id="date"></p>
         <p id="time"></p>
+        <p id="notes"></p>
     </div>
 
     <script src="bootstrap.min.js"></script>
