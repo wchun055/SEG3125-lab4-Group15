@@ -76,9 +76,9 @@
             <label for="barber">Choose your barber:</label><br>
                 <select id="barber-form" name="barber" required>
                     <option value="" selected disabled hiddens>--Select a barber--</option>
-                    <option value="mike">Mike “The Blade” Rodriguez</option>
-                    <option value="james">James Lee</option>
-                    <option value="alex">Alex Carter</option>
+                    <option value="Mike “The Blade” Rodriguez">Mike “The Blade” Rodriguez</option>
+                    <option value="James Lee">James Lee</option>
+                    <option value="Alex Carter">Alex Carter</option>
                 </select><br><br>
 
             <label for="haircut">Choose your haircut:</label><br>
@@ -122,7 +122,8 @@
         <p id="date"></p>
         <p id="time"></p>
         <p id="notes"></p>
-        <button onclick="clearBooking()" id="clearBttn" hidden>cancel Booking</button>
+        <button onclick="clearBooking()" id="clearBttn" hidden>Cancel Booking</button>
+        <button onclick="editBooking()" id="editBttn" hidden>Edit Booking</button>
     </div>
 
     <script src="bootstrap.min.js"></script>
