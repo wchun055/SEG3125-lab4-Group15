@@ -39,4 +39,31 @@ function makeBooking(){
     }
     form.reset();
     alert("Booking Successful!");
+    document.getElementById("clearBttn").hidden = false;
+}
+
+function clearBooking(){
+
+    nameBooking = document.getElementById("name");
+    nameBooking.innerText ="";
+
+    phoneNumber = document.getElementById("phone-number");
+    phoneNumber.innerText = "";
+
+    barber = document.getElementById("barber");
+    barber.innerText = "";
+
+    haircut = document.getElementById("haircut");
+    haircut.innerText = "";
+
+    date = document.getElementById("date");
+    date.innerText = "";
+
+    time = document.getElementById("time"); 
+    time.innerText = "";
+
+    notes = document.getElementById("notes"); 
+    notes.hidden = true;
+
+    document.getElementById("clearBttn").hidden = true;
 }
