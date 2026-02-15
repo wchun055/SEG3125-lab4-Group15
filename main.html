@@ -8,13 +8,13 @@
     <title>Iron Edge Barbers</title>
 </head>
 
-<body class="d-flex flex-column align-items-center m-3">
+<body class="d-flex flex-column align-items-center m-3" data-bs-theme="dark">
 
     <div id="header" class="d-flex flex-column align-items-center w-50 m-3">
         <h1 class="display-4">Iron Edge Barbers</h1>
         <p class="lead">Sharp cuts. Clean fades. Zero shortcuts.</p>
 
-        <img id="barbers-logo" src="assets/edge-barbers.png" alt="Edge Barbers">
+        <img id="barbers-logo" class="rounded" src="assets/edge-barbers.png" alt="Edge Barbers">
         
         <p class="lead m-4">123 Main Street, Brooklyn, NY 11201</p>
         <p class="lead">(555) 123-4567</p>
@@ -22,9 +22,9 @@
     </div>
 
     <div class="tab d-flex flex-column w-50">
-        <button class="tablinks btn btn-lg btn-dark m-3" onclick="moveUser('Barbers')">Barber Profiles</button>
-        <button class="tablinks btn btn-lg btn-dark m-3" onclick="moveUser('Haircuts')">Haircuts</button>
-        <button class="tablinks btn btn-lg btn-dark m-3" onclick="moveUser('Booking')">Book Your Cut</button>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Barbers')">Barber Profiles</button>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Haircuts')">Haircuts / Services</button>
+        <button class="tablinks btn btn-lg btn-light m-3" onclick="moveUser('Booking')">Book Your Cut</button>
     </div>
 
     <!-- Barber Profiles -->
@@ -54,7 +54,7 @@
     <!-- Haircut Types -->
     <div class="card w-75 m-5">
         <div id="Haircuts & Services" class="tabcontent m-3 card-body d-flex flex-column align-items-center">
-            <h3 class="display-6">Haircuts</h3>
+            <h3 class="display-6">Haircuts / Services</h3>
 
             <!-- Carousel with captions based off from Bootstrap documentation.-->
             <!-- https://getbootstrap.com/docs/5.3/components/carousel/ -->
@@ -117,9 +117,9 @@
                         <option value="Alex Carter">Alex Carter</option>
                     </select><br>
 
-                <label class="form-label lead" for="haircut">Choose your haircut:</label><br>
+                <label class="form-label lead" for="haircut">Choose your haircut / service:</label><br>
                         <select class="form-select m-1" id="haircut-form" name="haircut" required>
-                            <option value="" selected disabled hiddens>--Select a haircut--</option>
+                            <option value="" selected disabled hiddens>--Select a haircut / service--</option>
                             <option value="low-taper-fade">Low Taper Fade</option>
                             <option value="beard-trim">Beard Trim</option>
                             <option value="colour-services">Colour Services</option>
@@ -146,7 +146,7 @@
 
                 <label class="form-label lead" for="contact">Optional Notes:</label><br>
                     <textarea class="form-control m-1" type="text" rows="3" id="notes-form" name="contact" placeholder="allergies, etc"></textarea><br>
-                <button type="submit" class="btn btn-dark align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
+                <button type="submit" class="btn btn-light align-self-center m-3" onsubmit="makeBooking()">Book Now</button><br>
 
             </form>
         </div>
@@ -162,8 +162,8 @@
             <p id="date"></p>
             <p id="time"></p>
             <p id="notes"></p>
-            <button onclick="clearBooking()" class="btn btn-dark align-self-center m-3" id="clearBttn" hidden>Cancel Booking</button>
-            <button onclick="editBooking()" class="btn btn-dark align-self-center m-3" id="editBttn" hidden>Edit Booking</button>
+            <button onclick="clearBooking()" class="btn btn-light align-self-center m-3" id="clearBttn" hidden>Cancel Booking</button>
+            <button onclick="editBooking()" class="btn btn-light align-self-center m-3" id="editBttn" hidden>Edit Booking</button>
         </div>
     </div>
 

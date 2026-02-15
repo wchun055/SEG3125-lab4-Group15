@@ -1,11 +1,11 @@
 #carouselExampleCaptions {
   width: 70%;
-  background-color: grey;
+  background-color: (250, 250, 250, 0.5);
 }
 
 
 .carousel-item {
-  height: 30vh; /* 60% of screen height */
+  height: 30vh;
 }
 
 .carousel-caption p{
