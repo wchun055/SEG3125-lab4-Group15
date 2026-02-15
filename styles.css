@@ -1,0 +1,19 @@
+#carouselExampleCaptions {
+  width: 70%;
+  background-color: grey;
+}
+
+
+.carousel-item {
+  height: 30vh; /* 60% of screen height */
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit:contain
+}
+
+#Barbers img{
+  height: 30vh;
+  object-fit:contain
+}
